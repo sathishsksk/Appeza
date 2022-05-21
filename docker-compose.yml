@@ -5,7 +5,6 @@ services:
     build: .
     command: bash start.sh
     restart: on-failure
-    ports: - "80:80"
     environment: 
       BOT_TOKEN: $BOT_TOKEN
       GDRIVE_FOLDER_ID: $GDRIVE_FOLDER_ID
