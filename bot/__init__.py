@@ -2,6 +2,12 @@ import logging
 import socket
 import faulthandler
 import os
+import threading
+import time
+import random
+import string
+import subprocess
+import requests
 
 from telegram.ext import Updater as tgUpdater
 from qbittorrentapi import Client as qbClient
