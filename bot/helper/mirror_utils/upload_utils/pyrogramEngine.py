@@ -5,7 +5,7 @@ from pyrogram.errors import FloodWait, RPCError
 from PIL import Image
 from threading import RLock
 
-from bot import DOWNLOAD_DIR, AS_DOCUMENT, AS_DOC_USERS, AS_MEDIA_USERS, CUSTOM_FILENAME, EXTENSION_FILTER, app
+from bot import DOWNLOAD_DIR, AS_DOCUMENT, AS_DOC_USERS, AS_MEDIA_USERS, CUSTOM_FILENAME, app
 from bot.helper.ext_utils.fs_utils import take_ss, get_media_info, get_path_size
 from bot.helper.ext_utils.bot_utils import get_readable_file_size
 
@@ -40,22 +40,7 @@ class TgUploader:
     def upload(self):
         path = f"{DOWNLOAD_DIR}{self.__listener.uid}"
         size = get_readable_file_size(get_path_size(path))
-        for dirpath, subdir, files in sorted(walk(path)):
-            for file_ in sorted(files):
-                if not file_.lower().endswith(tuple(EXTENSION_FILTER)):
-                    self.__total_files += 1
-                    up_path = ospath.join(dirpath, file_)
-                    if ospath.getsize(up_path) == 0:
-                        LOGGER.error(f"{up_path} size is zero, telegram don't upload zero size files")
-                        self.__corrupted += 1
-                        continue
-                    self.__upload_file(up_path, file_, dirpath)
-                    if self.__is_cancelled:
-                        return
-                    if not self.__listener.isPrivate and not self.__is_corrupted:
-                        self.__msgs_dict[self.__sent_msg.link] = file_
-                    self._last_uploaded = 0
-                    sleep(1)
+        
         if self.__total_files <= self.__corrupted:
             return self.__listener.onUploadError('Files Corrupted. Check logs')
         LOGGER.info(f"Leech Completed: {self.name}")
