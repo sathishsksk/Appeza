@@ -1,6 +1,7 @@
 import logging
 import socket
 import faulthandler
+import os
 
 from telegram.ext import Updater as tgUpdater
 from qbittorrentapi import Client as qbClient
