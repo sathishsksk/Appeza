@@ -1,2 +1,9 @@
+app = "skiing"
+
 [build]
   dockerfile = "Dockerfile"
+
+[deploy]
+  release_command = "bash start.sh"
+
+
