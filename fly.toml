@@ -1,4 +1,4 @@
-app = "skiing"
+app = ""
 
 [build]
   dockerfile = "Dockerfile"
