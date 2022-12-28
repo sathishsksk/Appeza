@@ -1,9 +1,0 @@
-app = "restless-fire-6276"
-
-[build]
-  dockerfile = "Dockerfile"
-
-[deploy]
-  release_command = "bash start.sh"
-
-
