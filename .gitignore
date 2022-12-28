@@ -1,3 +1,4 @@
+fly.toml
 config.env
 *auth_token.txt
 *.pyc
