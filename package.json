@@ -1,21 +1,21 @@
 {
-  "name": "starter-express-api",
-  "version": "1.0.0",
+  "name": "Appeza",
+  "version": "",
   "description": "",
-  "main": "index.js",
+  "main": "start.sh",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cyclic-software/starter-express-api.git"
+    "url": "git+https://github.com/sathishsksk/Appeza.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/cyclic-software/starter-express-api/issues"
+    "url": "hthttps://github.com/sathishsksk/Appeza/issues"
   },
-  "homepage": "https://github.com/cyclic-software/starter-express-api#readme",
+  "homepage": "https://github.com/sathishsksk/Appeza#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
