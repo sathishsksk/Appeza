@@ -1,4 +1,4 @@
-FROM priiiiyo/mega-sdk-python:latest
+FROM sathishsk/abot:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
