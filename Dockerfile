@@ -1,4 +1,4 @@
-FROM sathishsk/abot:latest
+FROM sathishsk/tl:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
